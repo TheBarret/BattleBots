@@ -43,7 +43,8 @@ class Simulation:
             enemies = [o for o in self.agents if o.team != agent.team and o.alive]
             if enemies:
                 closest_enemy_dist = min(math.hypot(o.x - agent.x, o.y - agent.y) for o in enemies)
-                agent.proximity_reward += max(0.0, (ARENA_W - closest_enemy_dist) / ARENA_W)
+                if closest_enemy_dist > FITNESS_PROX_MAX:
+                    agent.proximity_reward += max(0.0, (ARENA_W - closest_enemy_dist) / ARENA_W)
 
             wall_dist = min(agent.x, ARENA_W - agent.x, agent.y, ARENA_H - agent.y)
             if wall_dist < 30.0:

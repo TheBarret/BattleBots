@@ -11,7 +11,7 @@ FRAMES_PER_GEN      = 1500
 # Audio
 AUDIO_SFX_ENABLED   = False   # Audio switch
 AUDIO_SFX_VOLUME    = 0.05   # offset volume for sfx channels
-AUDIO_MAX_PLAY      = 8     # play max of AUDIO_MAX_PLAY samples per frame
+AUDIO_MAX_PLAY      = 128     # play max of AUDIO_MAX_PLAY samples per frame
 
 # Debugger
 DEBUG_SHOW          = False

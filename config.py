@@ -6,12 +6,7 @@ ARENA_W, ARENA_H    = 750, 750
 UI_H                = 40
 WINDOW_W, WINDOW_H  = ARENA_W, ARENA_H + UI_H
 FPS                 = 60
-FRAMES_PER_GEN      = 1500
-
-# Audio
-AUDIO_SFX_ENABLED   = False   # Audio switch
-AUDIO_SFX_VOLUME    = 0.05   # offset volume for sfx channels
-AUDIO_MAX_PLAY      = 128     # play max of AUDIO_MAX_PLAY samples per frame
+FRAMES_PER_GEN      = 800
 
 # Debugger
 DEBUG_SHOW          = False
@@ -29,12 +24,18 @@ CROSSOVER_GENE_RATE = 0.5
 MUTATION_GENE_RATE  = 0.25
 MUTATION_SIGMA      = 0.1
 
+# Audio settings
+AUDIO_SFX_ENABLED   = False   # Audio switch
+AUDIO_SFX_VOLUME    = 0.05   # offset volume for sfx channels
+AUDIO_MAX_PLAY      = 128   # play max of AUDIO_MAX_PLAY samples per frame
+
+
 # Agent Settings
 AGENT_RADIUS        = 10
 AGENT_SPEED         = 0.85
 AGENT_TURN_RATE     = 0.15
 AGENT_MAX_HEALTH    = 250.0
-AGENT_MAX_COOLDOWN  = 5
+AGENT_MAX_COOLDOWN  = 15
 AGENT_FIRE_THR      = 0.75 # fire weight threshold
 AGENT_BOOST_THR     = 0.25 # booster weight threshold
 AGENT_DUAL_USE      = False # shoot & boost at the same time
@@ -55,16 +56,19 @@ BOOSTER_DRAIN_RATE  = 0.4               # Fuel consumed per boosted frame
 BOOSTER_RECHARGE_RATE = 0.1             # Recharge rate per frame when not boosting
 BOOSTER_SPEED_MULT  = 3.0           # Speed base multiplier when boosting (base + neuron_output)
 
-# Fitness parameters
+# Fitness parameters (+)
 FITNESS_WUR         = 2            # Warm-up round (Snapshot when iterations > FITNESS_WUR) (!)
-FITNESS_DMGD        = 4.00         # Reward for hitting enemies (+)
-FITNESS_KILL        = 10.0         # Flat bonus for eliminating an enemy (+)
-FITNESS_FIGHTER     = 0.05         # Flat small bonus for active engagment (+)
-FITNESS_PROX        = 0.05         # Reward closing distance to enemies (+)
-FITNESS_WALL        = 2.50         # Penalty for hugging walls (-)
-FITNESS_SHTF        = 9.50         # Cost per shot-and-missed spendure penalty (-)
-FITNESS_BOB         = 2.50         # Penalty blue on blue hits (-)
-FITNESS_TR          = 2.50         # Forever Rotation penalty (LOW_T/LOW_M) (-)
+FITNESS_DMGD        = 1.5         # Reward for hitting enemies (+)
+FITNESS_KILL        = 2.0         # Flat bonus for eliminating an enemy (+)
+FITNESS_FIGHTER     = 0.03         # Flat small bonus for active engagment (+)
+FITNESS_PROX        = 0.03         # Reward closing distance to enemies (+)
+FITNESS_PROX_MAX    = 45        # stop rewarding when distance is less then radius (switch)
+
+# Fitness parameters (-)
+FITNESS_WALL        = 2.0         # Penalty for hugging walls (-)
+FITNESS_SHTF        = 3.0         # Cost per shot-and-missed spendure penalty (-)
+FITNESS_BOB         = 2.0         # Penalty blue on blue hits (-)
+FITNESS_TR          = 1.0         # Forever Rotation penalty (LOW_T/LOW_M) (-)
 
 # Rotation Penalize Settings
 FITNESS_LOW_T       = 0.3   # lowest turn
@@ -72,7 +76,7 @@ FITNESS_LOW_M       = 0.2   # lowest movement
 
 # Bullet Settings
 BULLET_SPEED        = 10.0
-BULLET_LIFETIME     = 20
+BULLET_LIFETIME     = 35
 BULLET_RADIUS       = 1
 BULLET_DAMAGE       = 25
 BULLET_HIT_RADIUS   = AGENT_RADIUS

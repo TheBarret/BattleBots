@@ -1,8 +1,7 @@
 # Battle Bots - GA driven Neural Network Agents 
 # main rev 0.2
 
-<img width="360" height="414" src="https://github.com/user-attachments/assets/79f178d2-2cce-4211-b4da-09c0bbd17e6f" />    
-<img width="489" height="451" alt="image" src="https://github.com/user-attachments/assets/0a6b6130-1b9c-43f0-b4ac-0682b3a6791b" />
+<img width="360" height="414" src="https://github.com/user-attachments/assets/79f178d2-2cce-4211-b4da-09c0bbd17e6f" /><img width="360" height="414" alt="image" src="https://github.com/user-attachments/assets/0a6b6130-1b9c-43f0-b4ac-0682b3a6791b" />
 
 
 

@@ -6,7 +6,7 @@ ARENA_W, ARENA_H    = 750, 750
 UI_H                = 40
 WINDOW_W, WINDOW_H  = ARENA_W, ARENA_H + UI_H
 FPS                 = 60
-FRAMES_PER_GEN      = 1500
+FRAMES_PER_GEN      = 1100
 
 # Debugger
 DEBUG_SHOW          = False
@@ -36,8 +36,8 @@ AGENT_TURN_RATE     = 0.05
 AGENT_MAX_HEALTH    = 250.0
 AGENT_MAX_COOLDOWN  = 25
 
-AGENT_FIRE_THR      = 0.75
-AGENT_BOOST_THR     = 0.25
+AGENT_FIRE_THR      = 0.9
+AGENT_BOOST_THR     = 0.1
 AGENT_DUAL_USE      = False
 
 # Team Settings
@@ -50,7 +50,7 @@ SPAWN_ZONES = [
 BOOSTER_MAX_FUEL       = 25.0
 BOOSTER_DRAIN_RATE     = 0.4
 BOOSTER_RECHARGE_RATE  = 0.1
-BOOSTER_SPEED_MULT     = 1.0
+BOOSTER_SPEED_MULT     = 2.5
 
 # --- Fitness parameters (+) -------------------------------------------
 FITNESS_WUR         = 2
@@ -62,7 +62,7 @@ FITNESS_PROX_MAX    = AGENT_RADIUS + 20
 
 # --- Fitness parameters (-) --------------------------------------------
 FITNESS_WALL        = 1.0
-FITNESS_SHTF        = 1.5
+FITNESS_SHTF        = 5.5
 FITNESS_BOB         = 5.0
 FITNESS_TR          = 0.5
 

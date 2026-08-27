@@ -22,8 +22,6 @@ Usage: `python main.py`
 /src/models.py            # structural classes
 /src/sfx/*                # raw audio files
 /src/samples/*            # pre-trained network (numpy) artifacts, grouped by layout sequence
-/src/samples/36-38-4/*    # Network revision artifacts: 0.4 (initial prototypes)
-/src/samples/36-42-4/*    # Network revision artifacts: 0.5 (planned: HeatMap/MapData awareness)
 
 /src/ai/__init__.py   
 /src/ai/genetics.py       # genetic algorithm operators, selection, crossover, mutation

@@ -3,12 +3,10 @@ import random
 import sys
 import pygame
 
-# Import your existing NEAT modules
 from config import *
 from population import Population
 
 #  Geometry & Perception Helpers
-
 def line_intersects_circle(p1: tuple[float, float], p2: tuple[float, float],
                            center: tuple[float, float], radius: float) -> bool:
     """Fast ray-circle line segment intersection test for obstacle occlusion."""
@@ -28,8 +26,7 @@ def line_intersects_circle(p1: tuple[float, float], p2: tuple[float, float],
     return (0 <= t1 <= 1) or (0 <= t2 <= 1)
 
 
-#  Simulation Entities
-
+# Simulation Entities
 class Obstacle:
     def __init__(self, x: float, y: float, radius: float):
         self.x = x
@@ -242,7 +239,6 @@ class Bot:
 
 
 #  Main Sandbox Controller
-
 class Simulation:
     def __init__(self):
         pygame.init()
